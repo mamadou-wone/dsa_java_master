@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         /**
-         *  Buble sort
+         *  Selection sort
          * */
         int[] myArray = {20, 35,-2, 21, -15, 2, 7, 55, 1, -22, -33};
         int count = myArray.length;
