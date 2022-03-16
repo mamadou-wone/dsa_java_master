@@ -1,13 +1,26 @@
 public class InsertionSort {
 
+    static void swap(int i, int firstUnsortedPartition, int[] tab){
+        int temp = tab[i];
+        tab[i] = tab[firstUnsortedPartition];
+        tab[firstUnsortedPartition] = temp;
+    }
+
     public static void main(String[] args) {
-        while (true){
-            try {
-                System.out.println("\uD83C\uDF2D \uD83C\uDF54 \uD83C\uDF5F \uD83C\uDF55 \uD83E\uDED3 \uD83E\uDD6A \uD83E\uDD59 \uD83E\uDDC6 \uD83C\uDF2E \uD83C\uDF2F");
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+        int[] intArray = {20, 35, -15, 7, 55, 1, -22};
+        for (int firstUnsortedIndex = 1; firstUnsortedIndex < intArray.length; firstUnsortedIndex++) {
+            int newElement = intArray[firstUnsortedIndex]; // 35
+
+            int i;
+
+            for (i = firstUnsortedIndex; i > 0 && intArray[i - 1] > newElement; i--) {
+                intArray[i] = intArray[i - 1];
             }
+            intArray[i] = newElement;
+        }
+
+        for (int k : intArray) {
+            System.out.println(k);
         }
     }
 
