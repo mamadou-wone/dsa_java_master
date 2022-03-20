@@ -1,7 +1,19 @@
 public class Test {
     public static void main(String[] args) {
         // @Amir
-        int[] intArray = {12, 56, 98, 14, 0, 3, 6};
+       // System.out.println(factoriel(10));
+        int[] intArray = {5, 41, 1, 68, 0};
+        shellSort(intArray);
+    }
+
+    public static int factoriel(int num){
+        if (num == 0){
+            return 1;
+        }
+        return num * factoriel(num - 1);
+    }
+
+    public static void shellSort(int[] intArray){
         for (int firstUnsortedIndex = 1; firstUnsortedIndex < intArray.length; firstUnsortedIndex++) {
             int newElement = intArray[firstUnsortedIndex];
 
@@ -12,9 +24,8 @@ public class Test {
             }
             intArray[i] = newElement;
         }
-
-        for (int elem: intArray) {
-            System.out.println(elem);
+        for(int r: intArray){
+            System.out.println(r);
         }
     }
 }
