@@ -6,6 +6,10 @@ public class SelectionSort {
      */
     static int[] myArray = {20, 35, -15, 7, 55, 1, -22};
 
+    /**
+     *
+     * @param intArray
+     */
     public static void selectionSort(int[] intArray){
         int lastUnsortedIndex = intArray.length - 1;
         int i = 1;
