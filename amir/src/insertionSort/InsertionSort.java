@@ -6,21 +6,22 @@ public class InsertionSort {
      */
     static int[] myArray = {20, 35, -15, 7, 55, 1, -22};
 
-    public static void swap(int[] intArray, int i, int j){
-        int temp = intArray[i];
-        intArray[i] = intArray[j];
-        intArray[j] = temp;
+    public static void insertionSort(int[] intArray){
+        for(int firsUnsortedIndex = 1; firsUnsortedIndex < intArray.length; firsUnsortedIndex++){
+            int newElement = intArray[firsUnsortedIndex];
+
+            int i;
+
+            for (i = firsUnsortedIndex; i > 0 && intArray[i - 1] > newElement; i--){
+                intArray[i] = intArray[i - 1];
+            }
+
+            intArray[i] = newElement;
+        }
     }
 
     public static void main(String[] args) {
-        for (int i = 0; i < myArray.length; i++){
-            for (int j = i + 1; j < myArray.length; j++){
-                if (myArray[i] > myArray[j]){
-                    swap(myArray, i, j);
-                }
-            }
-        }
-
+        insertionSort(myArray);
         for(int elem: myArray){
             System.out.println(elem);
         }

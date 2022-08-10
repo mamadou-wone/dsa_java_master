@@ -6,6 +6,12 @@ public class BubbleSort {
      */
     static int[] myArray = {20, 35, -15, 7, 55, 1, -22};
 
+    public static void swap(int[] intArray, int i, int j){
+        int temp = intArray[i];
+        intArray[i] = intArray[j];
+        intArray[j] = temp;
+    }
+
     /**
      * Bubble Sort implementation
      * @param intArray the array tha we need to sort
