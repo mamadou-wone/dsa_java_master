@@ -1,5 +1,7 @@
 package bubbleSort;
 
+import java.util.Arrays;
+
 public class BubbleSort {
     /**
      * initial Array that we need to sort
@@ -44,12 +46,13 @@ public class BubbleSort {
     }
 
     public static void main(String[] args) {
-        bubbleSort(myArray, 1);
-        for (int elem: myArray) {
-            System.out.println(elem);
-        }
-        System.out.println("***************************************");
-        bubbleSort(myArray, 0);
+//        bubbleSort(myArray, 1);
+//        for (int elem: myArray) {
+//            System.out.println(elem);
+//        }
+//        System.out.println("***************************************");
+//        bubbleSort(myArray, 0);
+        Arrays.sort(myArray);
         for (int elem: myArray) {
             System.out.println(elem);
         }
