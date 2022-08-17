@@ -27,16 +27,16 @@ public class Main {
         list.addToFront(grayMan);
         list.addToFront(johnDoe);
         list.addToFront(jeanneDoe);
-       // list.printList();
+        list.printList();
         System.out.println(list.isEmpty());
         System.out.println(list.getSize());
-//        employeeList.forEach(employee -> System.out.println(employee));
+        employeeList.forEach(employee -> System.out.println(employee));
 
-//        Employee[] employeeArray = employeeList.toArray(new Employee[employeeList.size()]);
-//
-//        for (Employee employee: employeeArray){
-//            System.out.println(employee);
-//        }
+        Employee[] employeeArray = employeeList.toArray(new Employee[employeeList.size()]);
+
+        for (Employee employee: employeeArray){
+            System.out.println(employee);
+        }
 
     }
 
