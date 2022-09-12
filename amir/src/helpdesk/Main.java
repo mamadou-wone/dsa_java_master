@@ -3,10 +3,27 @@ package helpdesk;
 public class Main {
 
     public static void main(String[] args) {
+        char[] character = {'a', 'e', 'i', 'o', 'u', 'y'};
+        String chain = "prendre son temps";
+        String result = "";
+        for (int i = 0; i < chain.length(); i++) {
+
+         //   System.out.println(chain.charAt(i));
+            for (char c : character) {
+                if (chain.charAt(i) == c) {
+                    char t = chain.charAt(i);
+                    t = '#';
+                    result += t;
+                   // result = "";
+                }
+            }
+            result += chain.charAt(i);
+        }
+        System.out.println(result);
     //    getDigits(158946);
     //    System.out.println((int) ('A'));
-        System.out.println(toLower("Ws5NE"));
-        System.out.println(toUpper("wone472"));
+//        System.out.println(toLower("Ws5NE"));
+//        System.out.println(toUpper("wone472"));
     }
 
     public static String toUpper(String chain){
